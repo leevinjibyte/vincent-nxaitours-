@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | Nxai Tours</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background-color: #fff;
+      color: #222;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background: #111;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+    }
+
+    nav {
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      padding: 15px;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: black;
+      margin: 0 15px;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: red;
+    }
+
+    .hero {
+      background: url('https://cdn.pixabay.com/photo/2017/07/31/11/21/africa-2554559_1280.jpg') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 120px 20px;
+      position: relative;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.5);
+    }
+
+    .hero h1 {
+      position: relative;
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      position: relative;
+      font-size: 1.2em;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    section {
+      max-width: 1000px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+
+    h2 {
+      color: red;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    p {
+      text-align: center;
+      line-height: 1.6;
+      color: #444;
+    }
+
+    .about-img {
+      width: 100%;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
+    .mission-vision {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .mission-vision div {
+      background: #f7f7f7;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .mission-vision div:hover {
+      transform: translateY(-5px);
+    }
+
+    .team {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 25px;
+      margin-top: 40px;
+    }
+
+    .team-member {
+      width: 250px;
+      background: #f7f7f7;
+      border-radius: 10px;
+      text-align: center;
+      padding: 20px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .team-member img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+
+    .testimonial {
+      background: #f7f7f7;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      text-align: center;
+      font-style: italic;
+    }
+
+    .cta {
+      background: #111;
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+      border-radius: 10px;
+      margin-top: 60px;
+    }
+
+    .cta a {
+      color: white;
+      background: red;
+      padding: 10px 25px;
+      border-radius: 5px;
+      text-decoration: none;
+      margin-top: 10px;
+      display: inline-block;
+      transition: background 0.3s;
+    }
+
+    .cta a:hover {
+      background: darkred;
+    }
+
+    footer {
+      background: #111;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 40px;
+    }
+
+    footer p {
+      font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h2>Nxai Tours</h2>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="tours.html">Tours</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <div class="hero">
+    <h1>Explore. Discover. Connect.</h1>
+    <p>At Nxai Tours, we turn your travel dreams into unforgettable journeys through Botswana’s wild heart.</p>
+  </div>
+
+  <section>
+    <h2>About Nxai Tours</h2>
+    <p>Founded with a passion for adventure and conservation, Nxai Tours provides unique safari experiences that balance comfort, culture, and nature. Our mission is to reveal the true beauty of Africa while supporting local communities and protecting wildlife for future generations.</p>
+    <img src="https://z-p3-scontent-jnb2-1.xx.fbcdn.net/v/t39.30808-6/565331669_122265351122195638_1242596894744253060_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeEF5pyVAZC5rY_gdbtSOhoo21dwfPh6EFvbV3B8-HoQWxCP1w5ISf5VtI7dgCJAqpK5UBcMF5VLoikCfIpZGUsx&_nc_ohc=NmkB9CUVIxcQ7kNvwEHs1N5&_nc_oc=AdmT1rOuNuIQRosWegc3vK_8xkcEmZjYmT0wx-huhxwycMI74vOCzq2Z3-lX441_MEM&_nc_zt=23&_nc_ht=z-p3-scontent-jnb2-1.xx&_nc_gid=k0CUcif-cqQmz5cGZB9Dpw&oh=00_AfikpbHVUp___Kf5Fmp4uIPGIibedumnvK0erQbPf3fVfg&oe=690D59B5" alt="Nxai Safari" class="about-img">
+
+    <div class="mission-vision">
+      <div>
+        <h3>🌍 Our Mission</h3>
+        <p>To deliver memorable, safe, and eco-conscious travel experiences that promote love and respect for Botswana’s nature and culture.</p>
+      </div>
+      <div>
+        <h3>💡 Our Vision</h3>
+        <p>To become Botswana’s most trusted and innovative tour company — inspiring travelers to explore Africa responsibly.</p>
+      </div>
+      <div>
+        <h3>❤️ Our Values</h3>
+        <p>Integrity, sustainability, customer satisfaction, and authentic African hospitality in every experience we create.</p>
+      </div>
+    </div>
+
+    <div id="testimonials">
+      <h2>What Our Clients Say</h2>
+      <div class="testimonial">
+        “Nxai Tours gave us an incredible experience! From the guides to the views — simply magical.”
+      </div>
+      <div class="testimonial">
+        “Our Botswana safari was beyond words. Professional and kind team throughout.”
+      </div>
+      <div class="testimonial">
+        “Best service ever! They really care about both nature and travelers.”
+      </div>
+    </div>
+
+    <h2>Meet Our Team</h2>
+    <div class="team">
+      <div class="team-member">
+        <img src="https://z-p3-scontent-jnb2-1.xx.fbcdn.net/v/t39.30808-6/471344404_616279281071776_7539172030482646342_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHM6bEoVldKDgd24o0QuG13yfxUFfQ6R6fJ_FQV9DpHp2N3dth7yrYYiMIhtnCrraDxTurmCp-rETFJ0GHjT_FI&_nc_ohc=trhpcC-qWUAQ7kNvwG94h9j&_nc_oc=Adkho65ws2KE6WOJuCGvoLg19JAFidDS1bG-GYAqYn8gdSanHaWtdk-XyCF-W4OuDlc&_nc_zt=23&_nc_ht=z-p3-scontent-jnb2-1.xx&_nc_gid=MMqygJMczfQqn9WGkVAReA&oh=00_Afi3pxCL1opxyrJniIxS68Vxru-piUDrzlcUwX5x3mMqlg&oe=690D6A4C" alt="Team Member">
+        <h4>Vincent Matsididi</h4>
+        <p>Founder & Tour Director</p>
+      </div>
+      <div class="team-member">
+        <img src="https://z-p3-scontent-jnb2-1.xx.fbcdn.net/v/t39.30808-6/477851772_2392051107828035_341374349287087142_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=a5f93a&_nc_eui2=AeHeDZ754nTIkwWEBCYFQ_L2N4fgx-82xuE3h-DH7zbG4dCQgZ5xSoPndWEi1Bp4LvyWht1E50D6wO5x63G6Q5wE&_nc_ohc=ngCHwN7zZ-QQ7kNvwGUYxoj&_nc_oc=AdloZZOTewi-JzHW5vLMKtZc7ghH1PuN74iwq_ShGs2A-fgGZuTMTISZ_W4xzCHkkZ4&_nc_zt=23&_nc_ht=z-p3-scontent-jnb2-1.xx&_nc_gid=vhxa2NJALWEKIzwe4U7q3g&oh=00_Afg-xDrGRO2dtlsmjZSvCs1uREIIPg1ARcwdjDiQOypd-w&oe=690D72DB" alt="Team Member">
+        <h4>Boago Johane</h4>
+        <p>Customer Relations Manager</p>
+      </div>
+      <div class="team-member">
+        <img src="https://z-p3-scontent-jnb2-1.xx.fbcdn.net/v/t1.6435-9/107612544_1195447440804462_2361011388434506160_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=a5f93a&_nc_eui2=AeHaRJ8nTUDLlfBoIIyiqfFrhCHEWS7tpI2EIcRZLu2kjT8eluviqDLy2aY5O-UAIP19G_sZH36HtgaTjSfXvSU-&_nc_ohc=KD9VtOzmm9IQ7kNvwFLfnTZ&_nc_oc=Adkvk9rL1m5JPr1IKMQUVc1R9HugooZhRr9qEet5EGzBtYXYPjYVXCGvIEXTXNuH5A8&_nc_zt=23&_nc_ht=z-p3-scontent-jnb2-1.xx&_nc_gid=-J0AIRjz_Io5SJiD7aeYzw&oh=00_AfhWWHe4NAZa-sgXBey64kJ4wGJ6_ki9-xJs1eH5kVA3vw&oe=692F0AC6" alt="Team Member">
+        <h4>Theo Gaborone</h4>
+        <p>Head Safari Guide</p>
+      </div>
+    </div>
+
+    <div class="cta">
+      <h2>Plan Your Next Adventure</h2>
+      <p>Let Nxai Tours handle every detail while you focus on creating memories that last forever.</p>
+      <a href="contact.html">Contact Us Today</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Nxai Tours | Light of Discovery | Designed by Vincent Matsididi</p>
+  </footer>
+</body>
+</html>

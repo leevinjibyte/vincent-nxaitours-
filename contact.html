@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact & Booking | Nxai Tours</title>
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      margin: 0;
+      background: #fff;
+      color: #111;
+    }
+
+    header, footer {
+      background: #111;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+    }
+
+    nav {
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      padding: 15px;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    }
+
+    nav a {
+      text-decoration: none;
+      color: black;
+      margin: 0 15px;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: red;
+    }
+
+    .contact-container, .form-container {
+      max-width: 600px;
+      margin: 50px auto;
+      background: #f7f7f7;
+      padding: 30px;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    input, textarea, select {
+      width: 90%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 15px;
+    }
+
+    button {
+      background: red;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: darkred;
+    }
+
+    .socials a {
+      margin: 0 10px;
+      color: black;
+      text-decoration: none;
+    }
+
+    .socials a:hover {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h2>Nxai Tours</h2>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="tours.html">Tours</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <!-- Contact Section -->
+  <div class="contact-container">
+    <h2>Contact Us</h2>
+    <form action="mailto:kobamelovincentnetwork@gmail.com" method="post" enctype="text/plain">
+      <input type="text" name="Full Name" placeholder="Full Name" required><br>
+      <input type="email" name="Email" placeholder="Email Address" required><br>
+      <textarea name="Message" placeholder="Your Message" rows="4"></textarea><br>
+      <button type="submit">Send Message</button>
+    </form>
+
+    <div class="socials">
+      <p>Follow or message us:</p>
+      <a href="https://www.facebook.com/vincent.k.matsididi" target="_blank">Facebook</a> |
+      <a href="https://www.instagram.com/YOUR_INSTAGRAM_USERNAME" target="_blank">Instagram</a> |
+      <a href="https://twitter.com/YOUR_TWITTER_USERNAME" target="_blank">Twitter</a> |
+      <a href="https://wa.me/26776676064" target="_blank">WhatsApp Nxai Tours</a>
+    </div>
+  </div>
+
+  <!-- Booking Section -->
+  <div class="form-container">
+    <h2>Book Your Adventure</h2>
+    <form action="mailto:kobamelovincentnetwork@gmail.com" method="post" enctype="text/plain">
+      <input type="text" name="Full Name" placeholder="Full Name" required><br>
+      <input type="email" name="Email" placeholder="Email Address" required><br>
+      <select name="Tour" required>
+        <option value="">Select Tour</option>
+        <option>Elephant Plains Safari</option>
+        <option>Kalahari Desert Expedition</option>
+        <option>Serengeti Wildlife Experience</option>
+      </select><br>
+      <input type="date" name="Date" required><br>
+      <button type="submit">Submit Booking</button>
+    </form>
+  </div>
+
+  <footer>
+    <p>© 2025 Nxai Tours | Light of Discovery</p>
+  </footer>
+
+</body>
+</html>

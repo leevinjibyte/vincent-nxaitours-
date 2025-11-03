@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Live Chat | Nxai Tours</title>
+  <style>
+    :root{
+      --brand:#d62828;
+      --bg:#ffffff;
+      --dark:#111;
+      --muted:#666;
+      --card:#f7f7f7;
+      --radius:12px;
+      --maxw:980px;
+      --gap:18px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background:var(--bg);
+      color:var(--dark);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+
+    header{
+      background:var(--dark);
+      color:#fff;
+      padding:18px 16px;
+      text-align:center;
+    }
+
+    header h1{ margin:0; font-size:20px; letter-spacing:0.2px; }
+
+    nav{
+      display:flex;
+      justify-content:center;
+      gap:14px;
+      padding:12px 16px;
+      background:#fff;
+      box-shadow:0 3px 8px rgba(0,0,0,0.06);
+      position:sticky;
+      top:0;
+      z-index:50;
+    }
+    nav a{
+      color:var(--dark);
+      text-decoration:none;
+      font-weight:600;
+      padding:8px 10px;
+      border-radius:8px;
+    }
+    nav a:hover{ color:var(--brand); }
+
+    main{
+      max-width:var(--maxw);
+      margin:26px auto;
+      padding:0 18px 60px;
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      padding:18px;
+      box-shadow:0 6px 18px rgba(16,24,40,0.06);
+      margin-bottom:var(--gap);
+    }
+
+    .intro{
+      display:flex;
+      gap:18px;
+      align-items:center;
+    }
+    .intro .logo{
+      width:84px;
+      height:84px;
+      border-radius:14px;
+      overflow:hidden;
+      flex:0 0 84px;
+      border:2px solid #fff;
+      box-shadow:0 6px 18px rgba(0,0,0,0.06);
+    }
+    .intro .logo img{ width:100%; height:100%; object-fit:cover; display:block; }
+    .intro .text h2{ margin:0 0 6px; color:var(--dark); font-size:20px; }
+    .intro .text p{ margin:0; color:var(--muted); font-size:14px; max-width:720px; }
+
+    .chat-area{
+      margin-top:16px;
+      display:grid;
+      grid-template-columns: 1fr;
+      gap:12px;
+    }
+
+    .templates{
+      display:flex;
+      gap:8px;
+      flex-wrap:wrap;
+    }
+    .template-btn{
+      background:transparent;
+      border:1px solid rgba(0,0,0,0.08);
+      padding:8px 12px;
+      border-radius:10px;
+      cursor:pointer;
+      font-weight:600;
+    }
+    .template-btn:hover{ border-color:var(--brand); color:var(--brand); }
+
+    label{ display:block; margin-top:6px; font-size:13px; color:var(--muted); }
+
+    textarea{
+      width:100%;
+      min-height:110px;
+      padding:12px;
+      border-radius:10px;
+      border:1px solid rgba(0,0,0,0.08);
+      font-size:15px;
+      resize:vertical;
+    }
+
+    .controls{
+      display:flex;
+      gap:12px;
+      margin-top:12px;
+      flex-wrap:wrap;
+      align-items:center;
+    }
+
+    .primary{
+      background:var(--brand);
+      color:#fff;
+      border:none;
+      padding:12px 18px;
+      border-radius:10px;
+      font-weight:700;
+      cursor:pointer;
+      display:inline-flex;
+      gap:10px;
+      align-items:center;
+    }
+    .primary:hover{ background:#b32222; }
+
+    .secondary{
+      background:transparent;
+      border:1px solid rgba(0,0,0,0.08);
+      padding:10px 14px;
+      border-radius:10px;
+      cursor:pointer;
+      font-weight:600;
+    }
+
+    .hint{ color:var(--muted); font-size:13px; margin-top:8px; }
+
+    .contact-info{
+      display:flex;
+      gap:12px;
+      align-items:center;
+      margin-top:12px;
+      flex-wrap:wrap;
+    }
+    .contact-pill{
+      background:#fff;
+      padding:8px 12px;
+      border-radius:999px;
+      border:1px solid rgba(0,0,0,0.06);
+      font-weight:600;
+      display:inline-flex;
+      gap:8px;
+      align-items:center;
+    }
+
+    footer{
+      text-align:center;
+      padding:22px 12px;
+      margin-top:26px;
+      background:#111;
+      color:#fff;
+    }
+
+    /* responsive */
+    @media (min-width:720px){
+      .chat-area{ grid-template-columns: 1fr 360px; align-items:start; }
+      textarea{ min-height:160px; }
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div style="display:flex; align-items:center; justify-content:center; gap:10px;">
+    <img src="https://z-p3-scontent-jnb2-1.xx.fbcdn.net/v/t39.30808-1/565331669_122265351122195638_1242596894744253060_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=2d3e12&_nc_eui2=AeEF5pyVAZC5rY_gdbtSOhoo21dwfPh6EFvbV3B8-HoQWxCP1w5ISf5VtI7dgCJAqpK5UBcMF5VLoikCfIpZGUsx&_nc_ohc=1fzgOKVy70sQ7kNvwH51ZHH&_nc_oc=AdlAHRD0s60_CAlmrda8YHIXs4r-cGO5W5SXRVKmeuCFo-Mqmp2xFKlN0PehtI4E69o&_nc_zt=24&_nc_ht=z-p3-scontent-jnb2-1.xx&_nc_gid=YM_kaCmpvjQHF6LTj6iREQ&oh=00_AfdxBcMaijjRVMO91ouRZdZsTQRj7oMAD3jKWBYQCalq1g&oe=68FBE892"
+         alt="Nxai Tours Logo"
+         style="height:40px; width:40px; border-radius:6px; object-fit:cover;">
+    <h1 style="margin:0;">Nxai Tours — Live Chat</h1>
+  </div>
+</header>
+
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="tours.html">Tours</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <main>
+    <div class="card intro">
+      <div class="logo">
+        <img alt="Nxai Logo" src="C:\Users\user\Desktop\Nxai Tours websitte\Nxai Tours website\Mavino Dip 10 (Matsididi)\images\565331669_122265351122195638_1242596894744253060_n.PNG">
+      </div>
+      <div class="text">
+        <h2>Start a chat with Nxai Tours on WhatsApp</h2>
+        <p>Click the button below to open a live WhatsApp conversation with our team. You can edit the message first — we’ll receive it directly and reply from our WhatsApp account.</p>
+      </div>
+    </div>
+
+    <div class="card chat-area">
+      <!-- left: message composer -->
+      <div>
+        <h3 style="margin:0 0 8px;">Write your message</h3>
+
+        <div class="templates">
+          <button class="template-btn" data-template="Hello Nxai Tours, I would like information about your safari packages.">Request safari info</button>
+          <button class="template-btn" data-template="Hi, I'm planning a trip for [date]. Can you help with pricing and availability?">Ask about availability</button>
+          <button class="template-btn" data-template="Hello, I want to book a group trip. Please advise on group discounts and dates.">Group booking</button>
+        </div>
+
+        <label for="userName">Your name (optional)</label>
+        <input id="userName" placeholder="Your name (e.g. Vincent)">
+
+        <label for="userPhone">Your phone (optional - include +267 or country code)</label>
+        <input id="userPhone" placeholder="+267 7xxxxxxxx">
+
+        <label for="messageBox">Message</label>
+        <textarea id="messageBox" placeholder="Write a short message to Nxai Tours...">Hello Nxai Tours, I am interested in your services. My name is </textarea>
+
+        <div class="controls">
+          <button id="openWhatsapp" class="primary" title="Open WhatsApp chat">💬 Start WhatsApp Chat</button>
+          <button id="openWhatsappPrefill" class="secondary" title="Open WhatsApp with a suggested message">Open with suggested message</button>
+          <button id="copyMessage" class="secondary" title="Copy message to clipboard">Copy message</button>
+        </div>
+
+        <p class="hint">Your message will open in WhatsApp Web (desktop) or the WhatsApp app (mobile). We recommend adding your name & a short detail so we can reply faster.</p>
+      </div>
+
+      <!-- right: quick contact / instructions -->
+      <aside>
+        <h3 style="margin-top:0">Quick Contact</h3>
+        <div class="contact-info">
+          <div class="contact-pill">+267 76676064</div>
+          <div class="contact-pill">leevinji@gmail.com</div>
+        </div>
+
+        <div style="margin-top:18px">
+          <strong>Why use WhatsApp?</strong>
+          <p style="color:var(--muted); margin-top:8px;">WhatsApp is fast, familiar to most users, and supports images, voice notes, and files — making it perfect for booking details and photos.</p>
+        </div>
+
+        <div style="margin-top:14px">
+          <strong>Note</strong>
+          <p style="color:var(--muted); margin-top:8px;">This opens a WhatsApp conversation with Nxai Tours. We respond during business hours — usually within a few hours.</p>
+        </div>
+      </aside>
+    </div>
+
+  </main>
+
+  <footer>
+    © 2025 Nxai Tours | Light of Discovery
+  </footer>
+
+  <script>
+    // PHONE number (Botswana) - change if needed
+    const phone = '26776676064'; // no +, no leading zeros; include country code
+    // Pre-encoded default message placeholder
+    const defaultMessageStart = 'Hello Nxai Tours, I am interested in your services. My name is ';
+
+    // UI refs
+    const msgBox = document.getElementById('messageBox');
+    const nameInput = document.getElementById('userName');
+    const phoneInput = document.getElementById('userPhone');
+    const openBtn = document.getElementById('openWhatsapp');
+    const prefillBtn = document.getElementById('openWhatsappPrefill');
+    const copyBtn = document.getElementById('copyMessage');
+
+    // helper: build whatsapp url (choose web or wa.me depending on device)
+    function buildWhatsappUrl(message, userPhoneVal){
+      const encoded = encodeURIComponent(message);
+      // If desktop (no mobile UA), open web.whatsapp.com for a smoother desktop experience
+      const isMobile = /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent) || (navigator.maxTouchPoints && navigator.maxTouchPoints > 1);
+      if(isMobile){
+        // wa.me link works well on mobile
+        // if user provided their phone, include it in the message
+        return `https://wa.me/${phone}?text=${encoded}`;
+      } else {
+        // desktop: use web.whatsapp.com to open in browser
+        return `https://web.whatsapp.com/send?phone=${phone}&text=${encoded}`;
+      }
+    }
+
+    // fill template buttons
+    document.querySelectorAll('.template-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        msgBox.value = btn.getAttribute('data-template');
+        msgBox.focus();
+      });
+    });
+
+    // copy message
+    copyBtn.addEventListener('click', async () => {
+      try{
+        await navigator.clipboard.writeText(msgBox.value);
+        copyBtn.textContent = '✔ Copied';
+        setTimeout(()=> copyBtn.textContent = 'Copy message', 2000);
+      }catch(e){
+        alert('Could not copy — your browser may not support clipboard API.');
+      }
+    });
+
+    // Main open button: allow user to edit message, append name if provided
+    openBtn.addEventListener('click', () => {
+      let message = msgBox.value || defaultMessageStart;
+      const nm = nameInput.value.trim();
+      const userPhoneVal = phoneInput.value.trim();
+      if(nm && !message.includes(nm)){
+        message = message + (message.endsWith(' ') ? '' : ' ') + nm;
+      }
+      // If user included their phone, add it to message for convenience
+      if(userPhoneVal && !message.includes(userPhoneVal)){
+        message += ' | Phone: ' + userPhoneVal;
+      }
+
+      const url = buildWhatsappUrl(message);
+      // open in new tab/window
+      window.open(url, '_blank');
+    });
+
+    // Prefill button: open fixed helpful message (useful for users who want fast start)
+    prefillBtn.addEventListener('click', () => {
+      // Compose a short helpful prefilled message
+      let message = 'Hello Nxai Tours, I would like more information about your safari packages and prices. My name is ';
+      if(nameInput.value.trim()){
+        message += nameInput.value.trim();
+      }
+      if(phoneInput.value.trim()){
+        message += '. Phone: ' + phoneInput.value.trim();
+      }
+      const url = buildWhatsappUrl(message);
+      window.open(url,'_blank');
+    });
+
+    // Accessibility: pressing Ctrl+Enter on textarea opens chat
+    msgBox.addEventListener('keydown', (e) => {
+      if(e.ctrlKey && e.key === 'Enter'){
+        openBtn.click();
+      }
+    });
+  </script>
+</body>
+</html>

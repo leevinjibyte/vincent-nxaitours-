@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Now | Nxai Tours</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background: #fff;
+      color: #111;
+    }
+
+    header, footer {
+      background: #111;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+    }
+
+    nav {
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      padding: 15px;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    }
+
+    nav a {
+      text-decoration: none;
+      color: black;
+      margin: 0 15px;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: red;
+    }
+
+    .form-container {
+      max-width: 600px;
+      margin: 50px auto;
+      background: #f7f7f7;
+      padding: 30px;
+      border-radius: 10px;
+    }
+
+    input, select {
+      width: 90%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 15px;
+    }
+
+    button {
+      background: red;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: darkred;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h2>Nxai Tours</h2>
+  </header>
+<nav>
+  <a href="index.html">Home</a>
+  <a href="tours.html">Tours</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+  <a href="book.html">Book Now</a>
+  <a href="livecharts.html">Live Charts</a>
+</nav>
+
+
+
+
+  <div class="form-container">
+    <h2>Book Your Adventure</h2>
+    <form>
+      <input type="text" placeholder="Full Name" required><br>
+      <input type="email" placeholder="Email Address" required><br>
+      <select required>
+        <option value="">Select Tour</option>
+        <option>Elephant Plains Safari</option>
+        <option>Kalahari Desert Expedition</option>
+        <option>Serengeti Wildlife Experience</option>
+      </select><br>
+      <input type="date" required><br>
+      <button type="submit">Submit Booking</button>
+    </form>
+  </div>
+
+  <footer>
+    <p>© 2025 Nxai Tours | Light of Discovery</p>
+  </footer>
+
+</body>
+</html>

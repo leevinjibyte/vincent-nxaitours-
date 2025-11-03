@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nxai Tours | Home</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      color: #111;
+      background-color: #fff;
+      overflow-x: hidden;
+    }
+
+    /* HEADER AREA */
+    header {
+      position: relative;
+      height: 100vh;
+      background-image: url('https://outdoorinventions.com/wp-content/uploads/2024/05/What-is-Hiking-A-Beginners-Guide-to-Conquering-the-Great-Outdoors.webp');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 15px 5%;
+    }
+
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    .logo {
+      width: 250px;
+      height: auto;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: black;
+      margin: 0 15px;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: red;
+    }
+
+    nav a:first-child {
+      color: red;
+    }
+
+    .search-container {
+      position: absolute;
+      top: 60px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      align-items: center;
+      background: white;
+      border-radius: 25px;
+      border: 3px solid purple;
+      padding: 5px 15px;
+      width: 45%;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    }
+
+    .search-container input {
+      border: none;
+      outline: none;
+      width: 100%;
+      padding: 8px;
+      font-size: 16px;
+      border-radius: 25px;
+    }
+
+    .search-container button {
+      border: none;
+      background: transparent;
+      cursor: pointer;
+      font-size: 20px;
+      color: purple;
+    }
+
+    .hero-bottom {
+      text-align: center;
+      background: rgba(255, 255, 255, 0.8);
+      padding: 20px 10px;
+    }
+
+    .hero-bottom a {
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+      margin: 0 10px;
+    }
+
+    .hero-bottom a:hover {
+      color: red;
+    }
+
+    .livecharts {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .livecharts a {
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+      font-size: 20px;
+      border: 2px solid black;
+      padding: 8px 20px;
+      display: inline-block;
+      transition: all 0.3s ease;
+    }
+
+    .livecharts a:hover {
+      background: black;
+      color: white;
+    }
+
+    .sections {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin: 30px 0;
+      flex-wrap: wrap;
+    }
+
+    .sections a {
+      text-decoration: none;
+      color: black;
+      font-weight: 500;
+      font-size: 18px;
+    }
+
+    .sections a:hover {
+      color: red;
+    }
+
+    footer {
+      background: #111;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      font-size: 14px;
+    }
+
+    @media(max-width:768px){
+      .search-container {
+        width: 80%;
+      }
+      nav a {
+        margin: 0 8px;
+      }
+      .logo {
+        width: 100px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="navbar">
+      <img src="C:\Users\user\Desktop\Nxai Tours websitte\Nxai Tours website\Mavino Dip 10 (Matsididi)\images\565331669_122265351122195638_1242596894744253060_n.PNG" alt="Nxai Tours Logo" class="logo">
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="tours.html">Tours</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+
+    <form class="search-container" action="https://www.google.com/search" method="get" target="_blank">
+      <input type="text" name="q" placeholder="Search..." required>
+      <button type="submit">🔍</button>
+    </form>
+
+    <div class="hero-bottom">
+      <div class="livecharts">
+        <a href="livecharts.html">LIVE CHARTS</a>
+      </div>
+
+      <div class="sections">
+        <a href="about.html">Learn more</a>
+        <a href="tours.html">Our services</a>
+        <a href="about.html#experience">Why choose Us</a>
+        <a href="about.html#testimonials">Client testimonials</a>
+      </div>
+    </div>
+  </header>
+
+  <footer>
+    <p>© 2025 Nxai Tours | Light of Discovery</p>
+  </footer>
+
+</body>
+</html>
